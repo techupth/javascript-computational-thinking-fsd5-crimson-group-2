@@ -88,4 +88,4 @@ for (let key of orders) {
   totalAmount += key["productPrice"] * key["productQuantity"];
 }
 
-console.log(`Total amount of the orders: ${totalAmount} Baht`);
+console.log(`Total amount of the orders: ${totalAmount.toLocaleString()} Baht`);

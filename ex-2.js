@@ -90,4 +90,6 @@ for (let key of orders) {
   }
 }
 
-console.log(`Paid by JCB credit card amount: (${totalPaidByJcb} Baht) `);
+console.log(
+  `Paid by JCB credit card amount: (${totalPaidByJcb.toLocaleString()} Baht) `
+);

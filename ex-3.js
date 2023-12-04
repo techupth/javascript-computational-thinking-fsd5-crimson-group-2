@@ -90,4 +90,6 @@ for (let key of orders) {
   }
 }
 
-console.log(`Total paid amount of Birdie Shepland: ${birdiePaid} Baht`);
+console.log(
+  `Total paid amount of Birdie Shepland: ${birdiePaid.toLocaleString()} Baht`
+);
