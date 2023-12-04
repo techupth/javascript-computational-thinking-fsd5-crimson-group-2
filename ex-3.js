@@ -82,3 +82,12 @@ let orders = [
 ];
 
 // Start coding here
+let birdiePaid = 0;
+
+for (let key of orders) {
+  if (key["customerName"] === "Birdie Shepland") {
+    birdiePaid += key["productPrice"] * key["productQuantity"];
+  }
+}
+
+console.log(`Total paid amount of Birdie Shepland: ${birdiePaid} Baht`);

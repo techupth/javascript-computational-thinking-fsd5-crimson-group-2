@@ -82,3 +82,18 @@ let orders = [
 ];
 
 // Start coding here
+let mostExpensiveAmount = 0;
+let idMostExpensiveAmount;
+
+for (let key of orders) {
+  let sum = key["productPrice"] * key["productQuantity"];
+  if (sum > mostExpensiveAmount) {
+    mostExpensiveAmount = sum;
+    idMostExpensiveAmount = key["id"];
+  }
+}
+
+console.log(mostExpensiveAmount);
+console.log(
+  `The most expensive order is order id ${idMostExpensiveAmount} (${mostExpensiveAmount} Baht)`
+);
