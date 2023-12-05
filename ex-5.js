@@ -82,3 +82,15 @@ let orders = [
 ];
 
 // Start coding here
+let hightestPriceProduct = 0;
+let idHightestPriceProduct;
+for (let i = 0; i < orders.length; i++) {
+  let key = orders[i];
+  if (key["productPrice"] * key["productQuantity"] > hightestPriceProduct) {
+    hightestPriceProduct = key["productPrice"] * key["productQuantity"];
+    idHightestPriceProduct = key["id"];
+  }
+}
+console.log(
+  `The most expensive order id order ${idHightestPriceProduct} (${hightestPriceProduct.toLocaleString()})`
+);

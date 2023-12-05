@@ -82,3 +82,12 @@ let orders = [
 ];
 
 // Start coding here
+let totalBirdieShepland = 0;
+for (let i = 0; i < orders.length; i++) {
+  let key = orders[i];
+  if (key["customerName"] === "Birdie Shepland") {
+    totalBirdieShepland += key["productPrice"] * key["productQuantity"];
+  }
+}
+totalBirdieShepland = `Total padi amount of Birdie Shepland: ${totalBirdieShepland.toLocaleString()} Baht`;
+console.log(totalBirdieShepland);

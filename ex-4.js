@@ -82,3 +82,15 @@ let orders = [
 ];
 
 // Start coding here
+let hightestPricePerPiece = 0;
+let hightestPriceProductName = "";
+for (let i = 0; i < orders.length; i++) {
+  let key = orders[i];
+  if (key["productPrice"] / key["productQuantity"] > hightestPricePerPiece) {
+    hightestPricePerPiece = key["productPrice"] / key["productQuantity"];
+    hightestPriceProductName = key["productName"];
+  }
+}
+console.log(hightestPricePerPiece);
+hightestPriceProductName = `The most expensive product in orders: ${hightestPriceProductName}`;
+console.log(hightestPriceProductName);
