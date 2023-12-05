@@ -82,3 +82,19 @@ let orders = [
 ];
 
 // Start coding here
+
+// ผลลัพธ์ Paid by JCB credit card amount: (8,515,926 Baht)
+
+// ระบุปัญหา 
+// ให้หาผลรวมคำสั่งซื้อที่จ่ายด้วยบัตรเครดิค  jcb
+
+// ขั้นตอนการหา
+// ให้หาผลรวมคำสั่ง ถ้าจ่ายด้วยบัตร jcb
+
+let totalPaidByjcb = 0;
+for (let i = 0; i < orders.length; i++){
+  if(orders[i].creditCardType === "jcb"){
+    totalPaidByjcb += orders[i].productPrice * orders[i].productQuantity
+  }
+}
+console.log(totalPaidByjcb)
